@@ -15,15 +15,16 @@ import javafx.stage.Stage;
  *
  * @author 2dam
  */
-public class Reto1_G3_Client extends Application {
+public class VentanaPrincipal extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SignIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
         
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
+        stage.setTitle("Principal");
+        stage.setResizable(false);
         stage.show();
     }
 
