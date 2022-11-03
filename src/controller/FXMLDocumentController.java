@@ -60,6 +60,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         lblTexto.setText(nombre + "\n" + lblTexto.getText());
+        System.out.println("Modifi");
     }    
     
 }
