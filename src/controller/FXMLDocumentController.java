@@ -43,10 +43,13 @@ public class FXMLDocumentController implements Initializable {
             ventanita.setHeaderText(null);
             ventanita.setTitle("Advertencia");
             ventanita.setContentText("¿Deseas Salir?");
+            //Con este Optional<ButtonType> creamos botones de Ok y cancelar
             Optional<ButtonType> action = ventanita.showAndWait();
+            //Si le da a OK el programa cesará de existir, se cierra por completo
             if (action.get() == ButtonType.OK) {
                 Platform.exit();
             } else {
+                //Si le da a cancelar la ventana emergente se cerrará pero la ventana principal se mantiene
                 ventanita.close();
             }
         }catch(Exception e){
